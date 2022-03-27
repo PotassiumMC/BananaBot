@@ -1,0 +1,14 @@
+{
+  "name": "BananaBot",
+  "version": "1.0.0",
+  "description": "The bot used in the PotassiumMC Discord server.",
+  "main": "index.js",
+  "repository": "https://github.com/PotassiumMC/BananaBot.git",
+  "author": "PotassiumMC",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "node-fetch": "^2.6.7"
+  }
+}
