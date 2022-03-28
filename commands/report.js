@@ -40,7 +40,7 @@ module.exports = {
             return;
         }
 
-        const reportedMessageMember = reportedMessage.author.bot ? null : await reportedMessage.guild.members.fetch(reportedMessage.author.id);
+        const reportedMessageMember = reportedMessage.webhookId ? null : await reportedMessage.guild.members.fetch(reportedMessage.author.id);
 
         const reportedMessageEmbed = new MessageEmbed()
             .setTitle(`[Click to jump]`)
