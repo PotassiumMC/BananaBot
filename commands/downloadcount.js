@@ -1,6 +1,7 @@
 const { getModrinthDownloadCounts, getCurseForgeDownloadCounts } = require('../utils/downloadCountUtils.js');
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { Client, CommandInteraction } = require('discord.js');
 
 const CACHE_DURATION = 60 * 1000;
 var cachedDownloadCounts;
@@ -9,6 +10,11 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('downloadcount')
         .setDescription('Gets the total download count of all PotassiumMC mods'),
+
+    /**
+     * @param {Client} client
+     * @param {CommandInteraction} interaction
+     */
     async execute(client, interaction) {
         if (!cachedDownloadCounts) {
             // Only fetch download counts every once in a while to prevent getting ratelimited

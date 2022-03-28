@@ -3,6 +3,8 @@
         "discord": "",
         "curseforge": ""
     },
+    "reportsChannel": "",
+    "modsPing": "<@&roleid> ",
     "projects": {
         "modrinth": [],
         "curseforge": []

@@ -17,7 +17,7 @@ for (const file of commandFiles) {
 }
 
 client.on('interactionCreate', async interaction => {
-    if (!interaction.isCommand()) return;
+    if (!interaction.isCommand() && !interaction.isContextMenu() && interaction.member) return;
 
     const command = client.commands.get(interaction.commandName);
 
