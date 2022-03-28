@@ -30,7 +30,7 @@ module.exports = {
         }
 
         if (cooldowns.has(interaction.user.id)) {
-            await interaction.reply({ content: '**You are reporting messages too fast!** Slow down and try again later. Please keep in mind that abusing the reports feature may result in a kick or ban.', ephemeral: true });
+            await interaction.reply({ content: '**You are reporting messages too fast!** Slow down and try again later. Please keep in mind that abusing the reports feature can result in a kick or ban.', ephemeral: true });
             return;
         }
 
