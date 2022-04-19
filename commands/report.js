@@ -1,7 +1,7 @@
 const { ApplicationCommandType } = require('discord-api-types/v9');
 const { ContextMenuCommandBuilder } = require('@discordjs/builders');
 
-const { Collection, Permissions, Client, MessageContextMenuInteraction, MessageEmbed } = require('discord.js');
+const { Collection, Client, MessageContextMenuInteraction, MessageEmbed } = require('discord.js');
 
 const cooldowns = new Collection();
 
@@ -21,11 +21,6 @@ module.exports = {
 
         if (reportedMessage.author.id === interaction.user.id) {
             await interaction.reply({ content: '**You can\'t report yourself, silly!**', ephemeral: true });
-            return;
-        }
-
-        if (!interaction.channel.permissionsFor(interaction.member).has(Permissions.FLAGS.SEND_MESSAGES)) {
-            await interaction.reply({ content: '**This message can\'t be reported!** You can only report messages in channels you can talk in.', ephemeral: true });
             return;
         }
 
