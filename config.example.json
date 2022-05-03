@@ -1,7 +1,8 @@
 {
     "keys": {
         "discord": "",
-        "curseforge": ""
+        "curseforge": "",
+        "pastegg": ""
     },
     "reportsChannel": "",
     "modsPing": "<@&roleid> ",
